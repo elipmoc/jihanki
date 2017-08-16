@@ -17,7 +17,7 @@ namespace jihanki
                 jihanki.ShowDrink();
                 Console.WriteLine("\r\nよし！何番のドリンクを買おうかな！？");
                 int index = int.Parse(Console.ReadLine());
-                Console.WriteLine(jihanki.name[index] + " だね！" + jihanki.value[index] + "円払おう！！");
+                Console.WriteLine(jihanki.name[index] + " だね！" + jihanki.price[index] + "円払おう！！");
                 jihanki.DrinkBuy(int.Parse(Console.ReadLine()), index);
             }
         }

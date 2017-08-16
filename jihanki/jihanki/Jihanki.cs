@@ -9,9 +9,9 @@ namespace jihanki
     //自販機クラス
     class Jihanki
     {
-        //飲み物名前配列
+        //飲み物名前配
         public string[] name = new string[5];
-        public int[] value = new int[5];
+        public int[] price = new int[5];
         public int[] num = new int[5];
 
         //コンストラクタ
@@ -22,11 +22,11 @@ namespace jihanki
             name[2] = "おしるこ";
             name[3] = "めんつゆ";
             name[4] = "RedBlue";
-            value[0] = 120;
-            value[1] = 60;
-            value[2] = 160;
-            value[3] = 220;
-            value[4] = 230;
+            price[0] = 120;
+            price[1] = 60;
+            price[2] = 160;
+            price[3] = 220;
+            price[4] = 230;
             num[0] = 5;
             num[1] = 3;
             num[2] = 2;
@@ -39,9 +39,10 @@ namespace jihanki
         {
             for (int i = 0; i < 5; i++)
             {
-                Console.WriteLine(i + "." + name[i] + " " + value[i] + "円 " + num[i] + "個");
+                Console.WriteLine(i + "." + name[i] + " " + price[i] + "円 " + num[i] + "個");
             }
         }
+        
 
 
         //ドリンク購入
@@ -49,7 +50,7 @@ namespace jihanki
         /// <param name="index"> 買いたいDrink配列の要素番号</param>
         public void DrinkBuy(int coin, int index)
         {
-            if (value[index] == coin)
+            if (price[index] == coin)
             {
                 if (num[index] == 0)
                     Console.WriteLine("品切れデス");
